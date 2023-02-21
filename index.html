@@ -3,12 +3,68 @@
 
 <head>
     <meta charset=utf-8/>
+    <title>hw-05</title>
+    <link rel="stylesheet" href="style.css">
+    <script src='js/d3.v6.1.1/d3.min.js'></script>
+    
 </head>
 
 
 <body>
+    <h1>hw-05: Interactive Graph with D3</h1>
 
 
+        <div class="left">
+            <div id="scatterplot"></div>
+            <div id="barchart"></div>
+        </div>
+        
+
+        <div class="right">
+
+            
+            <div id="display-last-click">
+                <p id="coordinates">Last point that was clicked:</p>
+            </div>
+
+            <br>
+
+            <div id="dropdowns">
+
+                <label>Select the x coordinate for the point you want to add:</label>
+                <select id="xCoord">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+
+                <br>
+
+                <label>Select the y coordinate for the point you want to add:</label>
+                <select id="yCoord">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+
+                <br>
+                <button type="button" onclick="newPoint()">Add to Graph</button>
+            </div>
+        </div>
+    </div>
+    <script src='js/script.js'></script>
 </body>
 
 </html>

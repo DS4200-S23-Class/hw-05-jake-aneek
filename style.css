@@ -1,0 +1,19 @@
+
+/* Set font of website */
+body {
+    font-family: Arial;
+}
+
+.right {
+	padding-top: 160px;
+	float: right;
+	width: 40%;
+}
+
+.left {
+	float: left;
+	width: 60%;
+    text-align:center;
+}
+
+
