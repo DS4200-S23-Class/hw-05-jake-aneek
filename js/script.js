@@ -117,7 +117,7 @@ d3.csv("data/bar-data.csv").then(function(data) {
     .range([450, 50]);
 
   //https://d3-graph-gallery.com/graph/interactivity_tooltip.html
-  const tooltip = d3.select("barchart")
+  const tooltip = d3.select("#barchart")
                     .append("div")
                     .attr("class", "tooltip")
                     .style("opacity", 0);  
@@ -150,6 +150,7 @@ d3.csv("data/bar-data.csv").then(function(data) {
   svg_Bar.append("g")
     .attr("transform", "translate(50,0)")
     .call(yAxis);
+
 });
 
 

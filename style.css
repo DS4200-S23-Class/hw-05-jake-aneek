@@ -30,3 +30,9 @@ fill: #34baeb;
 	stroke: black;
 	stroke-width: 4px;
 }
+
+#footer {
+	padding-top: 5%;
+	clear: both;
+	text-align: center;
+}
