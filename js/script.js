@@ -32,13 +32,12 @@ d3.csv("data/scatter-data.csv").then(function(data) {
             d3.select(this).classed("addStroke", !d3.select(this).classed("addStroke"))
         })
 
-        // When the circle is clicked, update lastClicked and the stroke
+        // deal with when a point is clicked
         .on("click", function(d){
-          // Update last clicked in text when circle is clicked
           let last_clicked = d3.select(this).attr("id")
-          d3.select("#coordinates").text(last_clicked)
+          d3.select("#coord").text(last_clicked)
           // Check if stroke exists, and change accordingly
-          if(d3.select(this).style('stroke') == 'teal'){
+          if(d3.select(this).style('stroke') == 'orange'){
               d3.select(this).style("stroke", "none");
           }
           else{
@@ -46,9 +45,12 @@ d3.csv("data/scatter-data.csv").then(function(data) {
               d3.select(this).style("stroke", "orange");
           }})
 
+          // change color when point is hovered 
           .on("mouseover", function(d) {
             d3.select(this).style("fill", "lightblue");
           })
+
+          // change color when point is unhovered
           .on("mouseout", function(d) {
             d3.select(this).style("fill", "black");
           });
