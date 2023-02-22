@@ -16,18 +16,14 @@
 
         <div class="left">
             <div id="scatterplot"></div>
-            <div id="barchart"></div>
         </div>
         
 
         <div class="right">
 
-            
-
-
-            <br>
-
             <div id="dropdowns">
+
+                <p id="coord">Last Point Clicked: (N/A)</p>
 
                 <label>Select the x coordinate for the point you want to add:</label>
                 <select id="xCoord">
@@ -42,7 +38,7 @@
                     <option value="9">9</option>
                 </select>
 
-                <br>
+                <p></p>
 
                 <label>Select the y coordinate for the point you want to add:</label>
                 <select id="yCoord">
@@ -57,14 +53,16 @@
                     <option value="9">9</option>
                 </select>
 
-                <br>
-                <button id="butt">Add to Graph</button>
+                <p></p>
 
-                <h3>Last Pressed Coordinates</h3>
-                <div id="coord"></div>
+                <button id="butt">Add to Graph</button>
+                
             </div>
         </div>
-    </div>
+
+        <div class = "left">
+            <div id="barchart"></div>
+        </div>
 
     <script src='js/script.js'></script>
 </body>

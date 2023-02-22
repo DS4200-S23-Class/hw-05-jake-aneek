@@ -7,7 +7,6 @@ h1 {
 }
 
 .right {
-	padding-top: 160px;
 	float: right;
 	width: 40%;
 }
@@ -18,3 +17,16 @@ h1 {
     text-align:center;
 }
 
+
+circle { 
+fill: #34baeb;
+ }
+
+rect { 
+fill: #34baeb;
+ }
+
+.addStroke { 
+	stroke: black;
+	stroke-width: 4px;
+}
