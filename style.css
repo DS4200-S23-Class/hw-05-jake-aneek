@@ -34,5 +34,6 @@ fill: #34baeb;
 #footer {
 	padding-top: 5%;
 	clear: both;
-	text-align: center;
+	text-align: left;
+	font-size: small;
 }
