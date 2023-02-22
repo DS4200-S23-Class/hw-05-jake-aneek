@@ -30,7 +30,28 @@ d3.csv("data/scatter-data.csv").then(function(data) {
         // Onclick: https://stackoverflow.com/questions/22584060/d3js-how-to-toggle-css-class-after-clicking-on-anelement
         .on("click", function() { 
             d3.select(this).classed("addStroke", !d3.select(this).classed("addStroke"))
-        });
+        })
+
+        // When the circle is clicked, update lastClicked and the stroke
+        .on("click", function(d){
+          // Update last clicked in text when circle is clicked
+          let last_clicked = d3.select(this).attr("id")
+          d3.select("#coordinates").text(last_clicked)
+          // Check if stroke exists, and change accordingly
+          if(d3.select(this).style('stroke') == 'teal'){
+              d3.select(this).style("stroke", "none");
+          }
+          else{
+              d3.select(this).style("stroke-width", "4px");
+              d3.select(this).style("stroke", "orange");
+          }})
+
+          .on("mouseover", function(d) {
+            d3.select(this).style("fill", "lightblue");
+          })
+          .on("mouseout", function(d) {
+            d3.select(this).style("fill", "black");
+          });
 
 
     // https://d3-graph-gallery.com/intro_d3js.html

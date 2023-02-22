@@ -18,16 +18,3 @@ h1 {
     text-align:center;
 }
 
-
-circle {
-	fill: #04d9ff;
-}
-
-circle:hover {
-	fill: goldenrod;
-}
-
-.addStroke { 
-	stroke: black;
-	stroke-width: 4px;
-}
