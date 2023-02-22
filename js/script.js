@@ -1,3 +1,9 @@
+// set of frame size
+const FRAME_HEIGHT = 500;
+const FRAME_WIDTH = 500; 
+const MARGINS = {left: 50, right: 50, top: 50, bottom: 50};
+
+
 // Set up the SVG container
 const svg = d3.select("#scatterplot")
   .append("svg")
@@ -55,7 +61,6 @@ d3.csv("data/scatter-data.csv").then(function(data) {
             d3.select(this).style("fill", "black");
           });
 
-
     // https://d3-graph-gallery.com/intro_d3js.html
     const xAxis = d3.axisBottom(xScale);
     const yAxis = d3.axisLeft(yScale);
@@ -67,6 +72,23 @@ d3.csv("data/scatter-data.csv").then(function(data) {
     svg.append("g")
     .attr("transform", "translate(50,0)")
     .call(yAxis);
+
+
+    d3.selectAll("#butt")
+    .on("click", function(d){
+    let xVal = document.getElementById("xCoord").value;
+    let yVal = document.getElementById("yCoord").value;
+    svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+        .attr("class", "circles")
+        .attr("id", (d) => {return "(" + xVal + ", " + yVal + ")"} )
+        .attr("cx", (d) => { return x(xVal) + MARGINS.left; } )
+        .attr("cy", (d) =>{ return y(yVal) + MARGINS.top; } )
+        .attr("r", 5)
+    });
 });
 
 
